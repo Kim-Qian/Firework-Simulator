@@ -285,36 +285,36 @@ const helpContent = {
 		body: '烟花越大绽放范围就越大，但是烟花越大，设备所需的性能也会增多，大的烟花可能导致你的设备卡顿。'
 	},
 	quality: {
-		header: '画质',
+		header: '渲染质量',
 		body: '如果动画运行不流畅，你可以试试降低画质。画质越高，烟花绽放后的火花数量就越多，但高画质可能导致你的设备卡顿。'
 	},
 	skyLighting: {
-		header: '天空照亮',
-		body: '烟花爆炸时，背景会被照亮。如果你的屏幕看起来太亮了，可以把它改成“昏暗”或者“无”。'
+		header: '照亮天空',
+		body: '燃放烟花所生成的焰火将会照亮天空。如果天空看起来太亮，可以将其设置为「较暗」或「关闭」。'
 	},
 	scaleFactor: {
-		header: '缩放',
-		body: '使你与烟花离得更近或更远。对于较大的烟花，你可以选择更小的缩放值，尤其是在手机或平板电脑上。'
+		header: '天空缩放',
+		body: '缩放整片天空在屏幕上显示的区域大小，对于在小尺寸设备上燃放的较大的烟花，适当缩小比例会更便于观赏。'
 	},
 	autoLaunch: {
-		header: '自动发射',
-		body: '开启后你就可以坐在你的设备屏幕前面欣赏烟花了，你也可以关闭它，但关闭后你就只能通过点击屏幕的方式来放烟花。'
+		header: '自动燃放',
+		body: '自动燃放烟花，和好友一起坐下来欣赏烟花表演吧！禁用以手动控制烟花燃放。'
 	},
 	finaleMode: {
-		header: '结局模式',
-		body: '发射后，烟花会在一段时间后自动结束，但是如果你开启了结局模式，烟花就会一直绽放下去，直到你手动关闭它。前提你必须打开"自动发射"。'
+		header: '同时燃放',
+		body: '同时燃放更多烟花，但可能会导致渲染卡顿。需要同时开启「自动燃放」。'
 	},
 	hideControls: {
-		header: '隐藏控制按钮',
+		header: '隐藏按钮',
 		body: '隐藏屏幕顶部的按钮。如果你要截图，或者需要一个无缝的体验，你就可以将按钮隐藏，隐藏按钮后你仍然可以在右上角打开设置。'
 	},
 	fullscreen: {
-		header: '全屏',
-		body: '切换至全屏模式'
+		header: '全屏体验',
+		body: '切换全屏模式以获得更加沉浸式的燃放体验。'
 	},
 	longExposure: {
-		header: '保留烟花轨迹',
-		body: '可以保留烟花留下轨迹的效果，但是这样会导致你的设备卡顿。'
+		header: '保留光轨',
+		body: '在天空中保留焰火的轨迹，类似于相机 B 门或多张堆栈。'
 	}
 };
 
@@ -731,20 +731,19 @@ function randomFastShell() {
 	return shellTypes[shellName];
 }
 
-
 const shellTypes = {
-	'Random': randomShell,
-	'Crackle': crackleShell,
-	'Crossette': crossetteShell,
-	'Crysanthemum': crysanthemumShell,
-	'Falling Leaves': fallingLeavesShell,
-	'Floral': floralShell,
-	'Ghost': ghostShell,
-	'Horse Tail': horsetailShell,
-	'Palm': palmShell,
-	'Ring': ringShell,
-	'Strobe': strobeShell,
-	'Willow': willowShell
+	'随机': randomShell,
+	'Crackle 爆裂烟花': crackleShell,
+	'Crossette 裂焰蕙花': crossetteShell,
+	'Crysanthemum 菊花': crysanthemumShell,
+	'Falling Leaves 落叶': fallingLeavesShell,
+	'Floral 花卉喷': floralShell,
+	'Ghost 幽灵烟花': ghostShell,
+	'Horse Tail 马尾烟花': horsetailShell,
+	'Palm 棕榈烟花': palmShell,
+	'Ring 球状烟花': ringShell,
+	'Strobe 脉冲窜天猴': strobeShell,
+	'Willow 柳形瀑布': willowShell
 };
 
 const shellNames = Object.keys(shellTypes);
@@ -772,14 +771,14 @@ function init() {
 	appNodes.shellSize.innerHTML = options;
 
 	setOptionsForSelect(appNodes.quality, [
-		{ label: '低质量', value: QUALITY_LOW },
-		{ label: '正常', value: QUALITY_NORMAL },
-		{ label: '高质量', value: QUALITY_HIGH }
+		{ label: '低', value: QUALITY_LOW },
+		{ label: '中', value: QUALITY_NORMAL },
+		{ label: '高', value: QUALITY_HIGH }
 	]);
 
 	setOptionsForSelect(appNodes.skyLighting, [
-		{ label: '无', value: SKY_LIGHT_NONE },
-		{ label: '昏暗', value: SKY_LIGHT_DIM },
+		{ label: '关闭', value: SKY_LIGHT_NONE },
+		{ label: '较暗', value: SKY_LIGHT_DIM },
 		{ label: '正常', value: SKY_LIGHT_NORMAL }
 	]);
 
@@ -2053,7 +2052,7 @@ if (IS_HEADER) {
 		init();
 	}, LAZY_LOADING_TIME);
 } else {
-	setLoadingStatus('准备引燃点火线');
+	setLoadingStatus('点燃引线中……');
 	setTimeout(() => {
 		soundManager.preload()
 		.then(
