@@ -772,14 +772,14 @@ function init() {
 	appNodes.shellSize.innerHTML = options;
 
 	setOptionsForSelect(appNodes.quality, [
-		{ label: '低质量', value: QUALITY_LOW },
-		{ label: '正常', value: QUALITY_NORMAL },
-		{ label: '高质量', value: QUALITY_HIGH }
+		{ label: '低', value: QUALITY_LOW },
+		{ label: '中', value: QUALITY_NORMAL },
+		{ label: '高', value: QUALITY_HIGH }
 	]);
 
 	setOptionsForSelect(appNodes.skyLighting, [
-		{ label: '无', value: SKY_LIGHT_NONE },
-		{ label: '昏暗', value: SKY_LIGHT_DIM },
+		{ label: '关闭', value: SKY_LIGHT_NONE },
+		{ label: '较暗', value: SKY_LIGHT_DIM },
 		{ label: '正常', value: SKY_LIGHT_NORMAL }
 	]);
 
