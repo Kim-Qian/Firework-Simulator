@@ -1,8 +1,8 @@
 let LOADING_POINT_TIMER = null;
 let NEXT_YEAR_TIMER = null;
-let NEXT_YEAR_TIME_YEAR = 2023;
-let NEXT_YEAR_TIME_MONTH = 1;
-let NEXT_YEAR_TIME_DAY = 22;
+let NEXT_YEAR_TIME_YEAR = 2024;
+let NEXT_YEAR_TIME_MONTH = 2;
+let NEXT_YEAR_TIME_DAY = 10;
 let NOW_TIME_TIMER = null;
 
 function setLoadingPoint() {
