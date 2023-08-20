@@ -731,19 +731,20 @@ function randomFastShell() {
 	return shellTypes[shellName];
 }
 
+
 const shellTypes = {
-	'随机': randomShell,
-	'Crackle 爆裂烟花': crackleShell,
-	'Crossette 裂焰蕙花': crossetteShell,
-	'Crysanthemum 菊花': crysanthemumShell,
-	'Falling Leaves 落叶': fallingLeavesShell,
-	'Floral 花卉喷': floralShell,
-	'Ghost 幽灵烟花': ghostShell,
-	'Horse Tail 马尾烟花': horsetailShell,
-	'Palm 棕榈烟花': palmShell,
-	'Ring 球状烟花': ringShell,
-	'Strobe 脉冲窜天猴': strobeShell,
-	'Willow 柳形瀑布': willowShell
+	'Random': randomShell,
+	'Crackle': crackleShell,
+	'Crossette': crossetteShell,
+	'Crysanthemum': crysanthemumShell,
+	'Falling Leaves': fallingLeavesShell,
+	'Floral': floralShell,
+	'Ghost': ghostShell,
+	'Horse Tail': horsetailShell,
+	'Palm': palmShell,
+	'Ring': ringShell,
+	'Strobe': strobeShell,
+	'Willow': willowShell
 };
 
 const shellNames = Object.keys(shellTypes);
@@ -771,14 +772,14 @@ function init() {
 	appNodes.shellSize.innerHTML = options;
 
 	setOptionsForSelect(appNodes.quality, [
-		{ label: '低', value: QUALITY_LOW },
-		{ label: '中', value: QUALITY_NORMAL },
-		{ label: '高', value: QUALITY_HIGH }
+		{ label: '低质量', value: QUALITY_LOW },
+		{ label: '正常', value: QUALITY_NORMAL },
+		{ label: '高质量', value: QUALITY_HIGH }
 	]);
 
 	setOptionsForSelect(appNodes.skyLighting, [
-		{ label: '关闭', value: SKY_LIGHT_NONE },
-		{ label: '较暗', value: SKY_LIGHT_DIM },
+		{ label: '无', value: SKY_LIGHT_NONE },
+		{ label: '昏暗', value: SKY_LIGHT_DIM },
 		{ label: '正常', value: SKY_LIGHT_NORMAL }
 	]);
 
