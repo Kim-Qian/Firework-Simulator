@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>烟花模拟器 - 赛博烟花</title>
+    <title>烟花模拟器</title>
     <meta name="viewport" content="width=device-width, initial-sccale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,12 +40,12 @@
     <div class="loading-init">
         <div class="loading-init__header">
             <div class="loading-init__text">
-                <div>加载中</div>
+                <div>Loading</div>
                 <div id="loading-init__point"></div>
             </div>
         </div>
         <div class="loading-init__status">
-            正在装配烟花
+            正在填装烟花
         </div>
     </div>
     <div class="stage-container remove">
@@ -81,49 +81,49 @@
                     </div>
                     <div class="form-option form-option--select">
                         <label class="quality-ui-label">
-                            画质
+                            渲染质量
                         </label>
                         <select class="quality-ui"></select>
                     </div>
                     <div class="form-option form-option--select">
                         <label class="sky-lighting-label">
-                            天空照明
+                            照亮天空
                         </label>
                         <select class="sky-lighting"></select>
                     </div>
                     <div class="form-option form-option--select">
                         <label class="scaleFactor-label">
-                            缩放
+                            天空缩放
                         </label>
                         <select class="scaleFactor"></select>
                     </div>
                     <div class="form-option form-option--checkbox">
                         <label class="auto-launch-label">
-                            自动发射
+                            自动燃放
                         </label>
                         <input class="auto-launch" type="checkbox"/>
                     </div>
                     <div class="form-option form-option--checkbox form-option--finale-mode">
                         <label class="finale-mode-label">
-                            结局模式
+                            同时燃放
                         </label>
                         <input class="finale-mode" type="checkbox"/>
                     </div>
                     <div class="form-option form-option--checkbox">
                         <label class="hide-controls-label">
-                            隐藏控制按钮
+                            隐藏按钮
                         </label>
                         <input class="hide-controls" type="checkbox"/>
                     </div>
                     <div class="form-option form-option--checkbox form-option--fullscreen">
                         <label class="fullscreen-label">
-                            全屏
+                            全屏体验
                         </label>
                         <input class="fullscreen" type="checkbox"/>
                     </div>
                     <div class="form-option form-option--checkbox">
                         <label class="long-exposure-label">
-                            保留烟花轨迹
+                            保留光轨
                         </label>
                         <input class="long-exposure" type="checkbox"/>
                     </div>
@@ -135,11 +135,12 @@
                     <div class="copy">
                         <script>
                             var mydate = new Date();
-                            document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - " + mydate.getFullYear() + '&nbsp;<a target="_blank" href="https://github.com/ChishFoxcat">Chish</a>&nbsp;All&nbsp;Rights&nbsp;Reserved');
+                            document.writeln("Copyright&nbsp;&copy;&nbsp;2023 - " + mydate.getFullYear() + '&nbsp;<a target="_blank" href="https://github.com/Kim-Qian">Kim-Qian</a>&nbsp;All&nbsp;Rights&nbsp;Reserved');
                         </script>
                         <p>
-                            此项目参考 <a href="https://github.com/NianBroken/Firework_Simulator">NianBroken/Firework_Simulator</a>｜基于
-                            <a href="https://codepen.io/MillerTime/pen/XgpNwb">XgpNwb</a> 二次修改
+                            Passionately built by <a href="https://cmiller.tech" target="_blank">Caleb Miller</a>.<br>
+                            Translated by <a href="https://github.com/troyxun" target="_blank">Troy</a>.<br>
+                            Edited by <a href="https://github.com/Kim-Qian" target="_blank">Kim-Qian</a>.
                         </p>
                     </div>
                 </div>
